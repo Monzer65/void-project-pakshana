@@ -1,4 +1,181 @@
 <!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>این دامنه در حال راه‌اندازی است</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Vazirmatn', sans-serif;
+        }
+
+        body {
+            background-color: #0b0f19;
+            color: #f1f5f9;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* افکت نوری پس‌زمینه ملایم و رسمی */
+        .bg-glow {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(30, 41, 59, 0.5) 0%, rgba(11, 15, 25, 0) 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* کارت اصلی با طراحی شیشه‌ای مدرن */
+        .card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 3.5rem 2.5rem;
+            border-radius: 16px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            z-index: 2;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* آیکون رسمی در حال ساخت */
+        .icon-container {
+            margin-bottom: 1.5rem;
+            color: #94a3b8;
+            display: inline-block;
+        }
+
+        .icon {
+            font-size: 3rem;
+            display: inline-block;
+            animation: pulseIcon 2s infinite ease-in-out;
+        }
+
+        @keyframes pulseIcon {
+            0%, 100% { opacity: 0.6; transform: scale(0.98); }
+            50% { opacity: 1; transform: scale(1.02); }
+        }
+
+        /* تایپوگرافی */
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .description {
+            font-size: 1rem;
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        /* برچسب وضعیت واگذاری */
+        .status-badge {
+            display: inline-block;
+            background: rgba(234, 179, 8, 0.1);
+            border: 1px solid rgba(234, 179, 8, 0.3);
+            color: #fde047;
+            font-weight: 500;
+            padding: 0.35rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* بخش اطلاعات تماس */
+        .contact-section {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 2rem;
+        }
+
+        .contact-title {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 0.75rem;
+            font-weight: 400;
+        }
+
+        .phone-number {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #38bdf8;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s ease;
+            letter-spacing: 0.5px;
+            direction: ltr;
+        }
+
+        .phone-number:hover {
+            color: #7dd3fc;
+            transform: translateY(-2px);
+        }
+
+        .note {
+            font-size: 0.8rem;
+            color: #475569;
+            margin-top: 1rem;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <div class="card">
+        <div class="icon-container">
+            <!-- آیکون رسمی کره زمین / شبکه -->
+            <span class="icon">🌐</span>
+        </div>
+
+        <h1>این دامنه در حال حاضر فعال نیست</h1>
+        
+        <p class="description">
+            وب‌سایت مورد نظر هنوز راه‌اندازی نشده و مراحل توسعه فنی خود را طی می‌کند.
+        </p>
+
+        <div class="status-badge">امکان واگذاری و فروش دامنه وجود دارد</div>
+
+        <div class="contact-section">
+            <p class="contact-title">جهت کسب اطلاعات بیشتر و ارتباط (فقط ارسال پیام):</p>
+            <a href="https://wa.me/989383872982" class="phone-number" target="_blank">+98 938 387 2982</a>
+            <p class="note">لطفاً از تماس تلفنی خودداری نموده و تنها از طریق پیام اقدام فرمایید.</p>
+        </div>
+    </div>
+
+</body>
+</html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -97,7 +274,6 @@
         <li>Engine: [Engine details]</li>
         <li>Transmission: [Transmission details]</li>
         <li>Color: [Car color]</li>
-        <!-- Add more details as needed -->
       </ul>
     </div>
   </div>
@@ -132,9 +308,8 @@
       <li>Price: Approximately two billion Iranian rials</li>
     </ul>
   </section>
-
   <footer>
     <p>&copy; 2023 Mohammad Moradkhani. All rights reserved.</p>
   </footer>
 </body>
-</html>
+</html> -->
